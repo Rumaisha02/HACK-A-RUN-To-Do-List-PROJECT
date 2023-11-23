@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackarun-TO-DO-LIST</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <div id="main-container">
+      <div id="headline">
+        <p>Manage your work wisely</p>
+        <div class="button">
+        <div id="Timerbutton">
+          <button> <a href="/timer.html"><P>POMODORA</P></a></button>
+        </div>
+      </div>
+        
+      </div>
+        <div id="main-page">
+            <div id="containers">
+                 <div id="todolist">
+
+
+                   <!--  **********************************************MAKING TO DO LIST********************************************************* -->
+
+                    <div class="box">
+                       <h2>To Do List</h2>
+                       <input type="text" placeholder="Type your list here.."   maxlength="150"  id="TodoinputBx">                     
+                       <ul id="Todolist"></ul>
+                    </div>
+                </div>
+                <script>
+                  let TodoinputBx = document.querySelector('#TodoinputBx');
+                  let Todolist = document.querySelector('#Todolist');
+
+                  TodoinputBx.addEventListener("keyup",function(work){
+                    if(work.key == "Enter"){
+                      addItem(this.value)
+                      this.value = ""
+                    }
+                  })
+
+                  let addItem = (TodoinputBx) => {
+                    let TodolistItem = document.createElement("li");
+                    TodolistItem.innerHTML = `${TodoinputBx}<i></i>`;
+                        // TO MARK DONE FOR COMPLETED TASK
+                    TodolistItem.addEventListener("click", function(){
+                      this.classList.toggle('done');
+                    })
+                      // TO REMOVE THE COMPLETED TASK
+                    TodolistItem.querySelector("i").addEventListener("click",function(){
+                      TodolistItem.remove();
+                    })
+                      Todolist.appendChild(TodolistItem );
+                  }
+                </script>
+
+
+ <!-- ****************** ******************************MAIKNG NOTES*****************************************************************************************  -->
+                <div id="notescontain">
+                  <div id="notes">
+                    <div class="createnote">
+                      <!-- <i class="fa-solid fa-plus"></i> -->
+                      <div class="creatnotebox">
+                        <div class="smallnotebox">
+                          <textarea placeholder="Wrtie your notes here.." 
+                          id="inputNote" maxlength="200"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                     <!-- <div class="note"></div> -->
+                    </div>
+                </div>
+              </div>
+                <!-- <script>
+                   let = document.getElementsByClassName('creatnotebox')
+                    [0];
+                   let notes = document.getElementById('notes')[0];
+                   let input = document.getElementById('inputNote');
+                   let i = 0;
+                  
+                   creatnotebox.addEventListener('keydown',contentwork);
+
+                   document.getElementById("createnote").addEventListener("click",
+                    function(){
+                      creatnotebox.style.display = "block";
+                   });
+                    function contentwork(e){
+                      if(e.keyCode == '15'){
+                        creatnotebox.style.display = "none";
+                      }
+                    }
+                </script> -->
+
+            <!-- <div id="bgchange">
+             <div id="bgimages">
+                   <button onclick="change()">Change</button>
+             </div>
+             <script>
+              function change(){
+                   document.getElementById("bgimages").style.backgroundImage="url(images/✿₊˚ Green Backgrounds ꔫ ‧₊˚.jpeg)";
+              }
+             </script>
+            </div> -->
+        </div>
+        
+  </div>
+    
+</body>
+</html>

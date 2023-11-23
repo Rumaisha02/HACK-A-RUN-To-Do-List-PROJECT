@@ -1,0 +1,484 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* background-color:#EAD7BB ; */
+}
+#containers{
+   min-height: 80vh;
+   width: 950px;
+   margin-left: 15%;
+   background-image: url(./images/download\ \(13\).jpeg);
+   background-size: cover;
+   /* padding-top: 50px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    -webkit-box-shadow: 15px 1px 19px 0px #BCA37F;
+    -moz-box-shadow: 15px 1px 19px 0px #BCA37F;
+    box-shadow: 15px 1px 19px 0px #BCA37F;
+}
+#headline{
+    height: 50px;
+    width: 100% ;
+    /* background-color: #113946; */
+    background-color: #113946;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+    /* margin-bottom: 50px; */
+}
+#headline>p{
+    width: 90%;
+    color: white;
+    align-self: center;
+    justify-self: center;
+    text-transform: uppercase;
+    font-size:2rem ;
+}
+.button{
+    height: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#Timerbutton{
+    border: 2px #BCA37F;
+    background: #BCA37F;
+    height: 40px;
+    border-radius: 10px; padding: 10px;
+    
+    
+}
+button{
+    background: none;
+    border: none;
+}
+button,a,p{
+    font-size: 1rem;
+    text-align: center;
+    align-self: center;
+    color: #113946;
+}
+
+/* #EC8F5E
+#F3B664
+#F1EB90
+#9FBB73 
+
+ #FFF2D8
+#EAD7BB
+#BCA37F
+#113946
+  */
+/* background image changing */
+/* #bgimages{
+    height: 100vh;
+    background-image: url(./images/Leaf\ Wallpaper\ _\ Peel\ &\ Stick\ Murals\ _\ Hovia\ UK.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+#main-page{
+    min-height: 100vh;
+    width: 100%;
+    /* background-image: url(./images/minimalist\ wallpaper\ for\ desktop.jpeg); */
+    background-size: cover;
+    z-index: -1;
+    background-color:#BCA37F;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+/*  ***********************************TO DO LIST STYLING ************************************************** */
+h2{
+    width: 80%;
+    margin-bottom: 10px;
+    font-weight: 700;
+    margin-left: 25px;
+    text-align: center;
+    color: #113946;
+    font-size: 1.75rem;
+}
+.box{
+    position: relative;
+    left: 10%;
+    width: 450px;
+    height: 72vh;
+    border-radius: 2px;
+    background-color:#EAD7BB;
+
+    /* background: rgba(252, 186, 197, 0.678); */
+    border-top: 2px solid #BCA37F;
+    border-right: 2px solid #BCA37F;
+    border-left: 2px solid #BCA37F;
+    border-bottom: 2px solid #BCA37F;
+    -webkit-box-shadow: 15px 1px 19px 0px #BCA37F;
+    -moz-box-shadow: 15px 1px 19px 0px #BCA37F;
+    box-shadow: 15px 1px 19px 0px #BCA37F;
+}
+#TodoinputBx{
+   position: relative;
+   margin-left: 20px;
+   width: 90%;
+   border: none;
+   outline: none;
+   padding: 15px 20px;
+   border-radius: 20px;
+   font-size: 1rem;
+   box-shadow: 5px 5px 7px #BCA37F, inset2px 2px 5px #BCA37F,
+   inset -3px -3px 5px #BCA37F;
+}
+.box li {
+    position: relative;
+    left: 5px;
+    width: calc(100% - 50px);
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    background-color:#113946;
+    margin: 15px 0;
+    padding: 10px 10px 10px 45px;
+    min-height: 45px;
+    cursor: pointer;
+    border-radius: 22.5px;
+    color: #FFF2D8;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, .25), inset 2px 2px 5px rgba(0, 0, 0, .5), inset -3px -3px 5px rgba(0, 0, 0, .5);
+}
+.box li i{
+    position: absolute;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a58e6e96;
+    border-radius: 50%;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, .25), 
+    inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+    inset -3px -3px 5px rgba(0, 0, 0, .5);
+ 
+
+}
+ 
+.box li i::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: #113946;
+     transform: rotate(45deg);
+}
+.box li i::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: #113946;
+     transform: rotate(-45deg);
+}
+.box li::before{
+    content: '';
+    position: absolute;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    background: #BCA37F;
+    border-radius: 50%;
+}
+
+.box li.done{
+    background: #5aa4bd;
+}
+.box li.done:after{
+    content: '';
+    position: absolute;
+    left: 16px;
+    width: 12px;
+    height: 6px;
+    border-left:  2px solid #113946;
+    border-bottom: 2px solid #113946;
+    transform: rotate(315deg);
+}
+#Todolist{
+    position: relative;
+    margin-top: 20px;
+    height: 350px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 15px #113946;
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background: #fff;
+}
+
+/* ***********************************************************************MAKING NOTES******************************** */
+
+:root{
+    --size: 400px;
+}
+#notescontain{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px;
+}
+.createnote{
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    background: rgba(255,  255,255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    cursor: pointer;
+}
+/* .createnote i{
+    position: absolute;
+    color: #fff;
+} */
+.creatnotebox{
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    z-index: 50;
+   /* display: none; */
+    
+}
+.creatnotebox textarea{
+    background-color: lemonchiffon;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--size);
+    height: var(--size);
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 1rem;
+    resize: none;
+    font-family: 'Shantell Sans', cursive;
+
+}
+#notescontain #notes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+/* #notescontain #notes .note{
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    background: #f7e98d;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+    font-family: 'Shantell Sans', cursive;
+} */
+/* #notescontain #notes .note::before{
+    content: 'Delete note';
+    position: absolute;
+    left: 0;bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .15);
+    padding: 3px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+} */
+/* #notescontain #notes .note:hover::before{
+    opacity: 1;
+} */
+
+
+@media (min-width:360px) and (max-width:780px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        /* background-color:#EAD7BB ; */
+    } 
+    #containers{
+        /* position: absolute;
+        left: 0px !important; */
+        margin-left:8%!important ;
+        min-height: 80vh;
+        width: 350px;
+        /* margin-left: 15%; */
+        background-image: url(./images/download\ \(13\).jpeg);
+        background-size: cover;
+        /* padding-top: 50px; */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+    }
+    #headline{
+        height: 70px;
+        width:415px !important;
+        /* background-color: #113946; */
+        background-color: #113946;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    #headline>p{
+        width: 90%;
+        color: white;
+        align-self: center;
+        justify-self: center;
+        text-transform: uppercase;
+        font-size:1rem ;
+    }
+    .button{
+        height: 25px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #Timerbutton{
+        border: 2px #BCA37F;
+        background: #BCA37F;
+        height: 40px;
+        border-radius: 10px; padding: 10px;  
+    }
+    button,a,p{
+        font-size: 0.85rem;
+        text-align: center;
+        align-self: center;
+        color: #113946;
+
+    }
+    #main-page{
+        min-height: 914px;
+        width: 415px !important;
+        /* background-image: url(./images/minimalist\ wallpaper\ for\ desktop.jpeg); */
+        background-size: cover;
+        z-index: -1;
+        background-color:#BCA37F;
+        padding-top: 60px;
+        padding-bottom: 50px;
+        display: flex;
+        align-items: center;
+    }
+    h2{
+        width: 80%;
+        margin-bottom: 10px;
+        font-weight: 700;
+        margin-left: 25px;
+        text-align: center;
+        color: #113946;
+        font-size: 1.75rem;
+    }
+    .box{
+        position: relative;
+        left: 0px;
+        top: 20px;
+        width: 250px;
+        height: 55vh;
+        border-radius: 2px;
+        background-color:#EAD7BB;
+        border-top: 2px solid #BCA37F;
+        border-right: 2px solid #BCA37F;
+        border-left: 2px solid #BCA37F;
+        border-bottom: 2px solid #BCA37F;
+    }
+    
+    #TodoinputBx{
+        position: relative;
+        margin-left: 15px;
+        width: 90%;
+        border: none;
+        outline: none;
+        padding: 15px 20px;
+        border-radius: 20px;
+        font-size: 1rem;
+        /* box-shadow: 5px 5px 7px #BCA37F, inset2px 2px 5px #BCA37F, */
+        /* inset -3px -3px 5px #BCA37F; */
+     }
+     .box li {
+        position: relative;
+        left: 5px;
+        width: calc(100%-50px);
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        background-color:#113946;
+        margin: 15px 0;
+        padding: 10px 10px 10px 45px;
+        min-height: 45px;
+        cursor: pointer;
+        border-radius: 22.5px;
+        color: #FFF2D8;
+        /* box-shadow: 5px 5px 7px rgba(0, 0, 0, .25), inset 2px 2px 5px rgba(0, 0, 0, .5), inset -3px -3px 5px rgba(0, 0, 0, .5); */
+    }
+    
+    :root{
+        --size: 250px;
+    }
+    #notescontain{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 50px;
+        /* padding: 50px; */
+    }
+    .createnote{
+        position: relative;
+        width: var(--size);
+        height: var(--size);
+        background: rgba(255,  255,255, 0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 6rem;
+        cursor: pointer;
+    }
+    .creatnotebox textarea{
+        background-color: lemonchiffon;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--size);
+        height: var(--size);
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 1rem;
+        resize: none;
+        font-family: 'Shantell Sans', cursive;
+    
+    }
+    
+
+    
+}
+
